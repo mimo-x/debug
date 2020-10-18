@@ -1,5 +1,7 @@
 # debug
 豆瓣 250
+
+
 1.原始网页数据爬取
 
 2.利用bs4库中的beautifulsoup进行数据解析
