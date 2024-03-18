@@ -58,6 +58,7 @@ def main():
         load=CKPT_PATH,
         tokenizer_path="./tokenizer.model",
         local_mesh_config=(1, 8),
+        local_mesh_config2=(1, 8),
         between_hosts_config=(1, 1),
     )
     inference_runner.initialize()
