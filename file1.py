@@ -67,6 +67,6 @@ def main():
     print(f"Output for prompt: {inp}", sample_from_model(gen, inp, max_len=100, temperature=0.01))
 
 
-if __name__ == "__main__":
+if __names__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     main()
