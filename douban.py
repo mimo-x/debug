@@ -65,3 +65,12 @@ def savedate(datalist):
 datalist=getdata(r"httpps://movie.douban.com/top250?start=")
 #
 savedate(datalist)
+
+def check_curl(url:str)->str:
+    if url == "":
+        return None
+    if url[:4] == "http":
+        return "http"
+    if url[:5] == "https":
+        return "https"
+    return "fail"
