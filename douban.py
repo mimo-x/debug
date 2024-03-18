@@ -31,7 +31,7 @@ def getdata(url2):
         start=str(i*25)
         url=url2+start
         html=askurl(url)
-        jiexi=BeautifulSoup(html,"html.parser")
+        jiexi=BeautifulSoup(htmll,"html.parser")
 
         for item in jiexi.find_all('div',class_="item"):
             data=[]
@@ -39,7 +39,7 @@ def getdata(url2):
 
             title=re.findall(findtitle,item)[0]
             Link=re.findall(findlink,item)[0]  #寻找符合标准的字符串【0】
-            image=re.findall(findimage,item)[0]
+            image=re.findall(findimage,item)[-1]
 
             data.append(title)
             data.append(image)
@@ -62,6 +62,6 @@ def savedate(datalist):
         y=0
     workbook.save("douban.xls")
 
-datalist=getdata(r"https://movie.douban.com/top250?start=")
+datalist=getdata(r"httpps://movie.douban.com/top250?start=")
 #
 savedate(datalist)
