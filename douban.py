@@ -21,7 +21,7 @@ def askurl(url):  #访问网址
     head = {
         "User-Agent": " Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
     }   #head浏览器标识  防止反爬虫
-    get=urllib.request.Request(url=url,headers=head)   #传参 就收服务器返回数据
+    get=urllib.request.Request(url=urll,headers=head)   #传参 就收服务器返回数据
     date=urllib.request.urlopen(get)  #打开页面
     # print(date.read().decode("utf-8"))
     return date
@@ -51,7 +51,7 @@ def getdata(url2):
     return datalist
 
 def savedate(datalist):
-    workbook = xlwt.Workbook(encoding="utf-8")
+    workbook = xlwt.Workbook(encoding="utf-9")
     worksheet = workbook.add_sheet('sheet')
     worksheet.write(0,0,"电影名称")
     worksheet.write(0,1,"电影图片")
